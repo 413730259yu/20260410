@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 練習範例目錄</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-color: #f0f2f5;
+        }
+        .sidebar {
+            width: 300px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .sidebar-header {
+            padding: 20px;
+            background-color: #1a252f;
+            text-align: center;
+        }
+        .sidebar-header h1 {
+            margin: 0;
+            font-size: 20px;
+            color: #3498db;
+        }
+        .student-id {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #bdc3c7;
+        }
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow-y: auto;
+        }
+        .menu li a {
+            display: block;
+            padding: 15px 20px;
+            color: #ecf0f1;
+            text-decoration: none;
+            border-bottom: 1px solid #34495e;
+            transition: all 0.2s ease;
+        }
+        .menu li a:hover, .menu li a:focus {
+            background-color: #34495e;
+            border-left: 4px solid #3498db;
+            padding-left: 16px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h1>Vue 練習範例目錄</h1>
+            <div class="student-id">學號：413730259</div>
+        </div>
+        <ul class="menu">
+            <li><a href="ex1/index.html" target="preview-frame">範例一：我的第一個 Vue 頁面</a></li>
+            <li><a href="ex2/index.html" target="preview-frame">範例二：資料綁定</a></li>
+            <li><a href="ex3/index.html" target="preview-frame">範例三：事件處理 (Methods)</a></li>
+            <li><a href="ex4/index.html" target="preview-frame">範例四：雙向綁定 (v-model)</a></li>
+            <li><a href="ex5/index.html" target="preview-frame">範例五：條件渲染 (v-if)</a></li>
+            <li><a href="ex6/index.html" target="preview-frame">範例六：列表渲染 (v-for)</a></li>
+            <li><a href="ex7/index.html" target="preview-frame">範例七：計算屬性 (Computed)</a></li>
+            <li><a href="ex8/index.html" target="preview-frame">範例八：動態樣式與 Class 綁定</a></li>
+            <li><a href="ex9/index.html" target="preview-frame">範例九：綜合練習 (待辦事項清單)</a></li>
+        </ul>
+    </aside>
+    
+    <main class="content">
+        <!-- 設定 name 為 preview-frame，以便 a 標籤對應，並預設載入範例一 -->
+        <iframe name="preview-frame" src="ex1/index.html" title="範例預覽視窗"></iframe>
+    </main>
+</body>
+</html>
